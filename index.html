@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+ // Get subject marks using prompts
+const sub1Marks = parseFloat(prompt("Enter marks for English (out of 100):"));
+const sub2Marks = parseFloat(prompt("Enter marks for Physics (out of 100):"));
+const sub3Marks = parseFloat(prompt("Enter marks for Maths (out of 100):"));
+const sub4Marks = parseFloat(prompt("Enter marks for chemistry (out of 100):"));
+const sub5Marks = parseFloat(prompt("Enter marks for Urdu (out of 100):"));
+const sub6Marks = parseFloat(prompt("Enter marks for Computer (out of 100):"));
+
+// To Calculate total and percentage
+const totalMarks = sub1Marks + sub2Marks + sub3Marks + sub4Marks + sub5Marks + sub6Marks;
+const percentage = (totalMarks / 600) * 100;
+
+// for grading 
+let grade;
+if (percentage >= 90) {
+  grade = "A+";
+} else if (percentage >= 80) {
+  grade = "A";
+} else if (percentage >= 70) {
+  grade = "B+";
+} else if (percentage >= 60) {
+  grade = "B";
+} else if (percentage >= 50) {
+  grade = "C";
+} else {
+  grade = "Fail";
+}
+
+
+
+// To Display marks sheet
+
+  document.write("<h1>Marks Sheet</h1>")
+  document.write("English:"+sub1Marks+"<br>");
+  document.write("Physics:"+sub2Marks+"<br>");
+  document.write(" Maths:"+sub3Marks+"<br>");
+  document.write("chemistry:"+sub4Marks+"<br>");
+  document.write("Urdu:"+sub5Marks+"<br>");
+  document.write("Computer:"+sub6Marks+"<br>");
+  document.write("Total Marks:"+totalMarks+"<br>")
+  document.write("Percentage: "+percentage.toFixed(3)+"%"+"<br>")
+  document.write(" Grade: "+grade)
+ 
+
+   
+</script>
+
+</body>
+</html>
